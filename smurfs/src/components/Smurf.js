@@ -96,6 +96,18 @@ const Smurf = props => {
       handleChanges(e.target.id, value)
     }
 
+    const deleteSmurf = e => {
+      e.preventDefault();
+      
+      axios.delete(apiUrl)
+        .then(res => {
+          history.goBack();
+        })
+        .catch(err => {
+          console.log(err.response);
+        });
+    }
+
     return <>
       <form onSubmit={formSubmit}>
       
@@ -148,6 +160,13 @@ const Smurf = props => {
               disabled={buttonDisabled}
             >
               Update
+            </button>
+            <button 
+              type="button" 
+              className="btn btn-primary btn-custom ml-3"
+              onClick={deleteSmurf}
+            >
+              Delete
             </button>
           </div>
         </div>
