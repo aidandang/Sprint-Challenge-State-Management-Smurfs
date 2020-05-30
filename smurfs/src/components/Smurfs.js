@@ -45,7 +45,7 @@ const Smurfs = props => {
             </thead>
             <tbody>
               {props.smurfs && props.smurfs.map(smurf => 
-                <tr key={uuid()}>
+                <tr key={uuid()} onClick={() => history.push(`${location.pathname}/${smurf.id}`)}>
                   <th scope="row"><span className="mr-2">{smurf.id}</span></th>
                   <td>{smurf.name}</td>
                   <td>{smurf.age}</td>
