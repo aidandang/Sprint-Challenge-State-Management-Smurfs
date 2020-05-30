@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import "./App.css";
-import Smurfs from '../components/Smurfs';
+// import routes
+import Routes from '../routes'
+
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Smurfs />
+      <div className="App container">
+        <Routes />
       </div>
     );
   }
