@@ -1,0 +1,16 @@
+- [ ] What problem does the context API help solve?
+The Context API was created to solve a specific problem in react, sharing state down a component tree. Similar to the solution that Redux and React-Redux libraries solve, this solution prevents prop drilling
+
+- [ ] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+1. There is only one store in Redux role (single source of truth). A store holds the whole state tree of your application. The only way to change the state inside it is to dispatch an action on it.
+2. Actions are payloads of information that send data from your application to your store. They are the only source of information for the store. You send them to the store using store.dispatch().
+3. Reducers specify how the application's state changes in response to actions sent to the store. Remember that actions only describe what happened, but don't describe how the application's state changes.
+
+- [ ] What is the difference between Application state and Component state? When would be a good time to use one over the other?
+Your application state is global, and your component state is local. 
+
+- [ ] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+Redux Thunk is a middleware allows you to write action creators that return a function instead of an action. The thunk can be used to delay the dispatch of an action (asyncronous), or to dispatch only if a certain condition is met.
+
+- [ ] What is your favorite state management system you've learned and this sprint? Please explain why!
+Redux definitely. Althought it is harder to understand the concept than Context API but once we understand it it is more organized and preditable and can help me working with bigger scale applications.
